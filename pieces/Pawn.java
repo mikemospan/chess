@@ -1,4 +1,4 @@
-package Pieces;
+package pieces;
 
 public class Pawn extends Piece {
     private boolean firstMove = true;

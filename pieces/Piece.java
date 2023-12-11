@@ -1,4 +1,4 @@
-package Pieces;
+package pieces;
 
 public abstract class Piece {
     private int x;

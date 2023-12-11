@@ -1,7 +1,5 @@
 package pieces;
 
-import board.Chess;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -28,7 +26,7 @@ public abstract class Piece extends JComponent {
         Graphics2D g2D = (Graphics2D) g;
 
         try {
-            ImageIcon image = new ImageIcon(Chess.class.getResource(getURL()));
+            ImageIcon image = new ImageIcon(Piece.class.getResource(getURL()));
             image = new ImageIcon(image.getImage().getScaledInstance(PIECE_SIZE,
                     PIECE_SIZE, Image.SCALE_SMOOTH));
             g2D.drawImage(image.getImage(), STARTING_POS + 4 * SQUARE_SIZE,

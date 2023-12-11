@@ -16,7 +16,7 @@ public class Board extends JPanel {
     public void paint(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         try {
-            ImageIcon chessBoard = new ImageIcon(Chess.class.getResource("/board/chess_board.jpg"));
+            ImageIcon chessBoard = new ImageIcon(Board.class.getResource("/board/chess_board.jpg"));
             chessBoard = new ImageIcon(chessBoard.getImage().getScaledInstance(BOARD_WIDTH,
                     BOARD_HEIGHT, Image.SCALE_SMOOTH));
             g2D.drawImage(chessBoard.getImage(), 0, 0, null);

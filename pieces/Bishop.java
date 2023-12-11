@@ -2,7 +2,7 @@ package pieces;
 
 public class Bishop extends Piece {
     @Override
-    public boolean canMove(int x, int y) {
-        return Math.abs(getX() - x) == Math.abs(getY() - y);
+    public boolean canMove(int col, int row) {
+        return Math.abs(getCol() - col) == Math.abs(getRow() - row);
     }
 }

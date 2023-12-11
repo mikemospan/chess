@@ -18,4 +18,8 @@ public class Pawn extends Piece {
         return (firstMove && getCol() == col && Math.abs(getRow() - row) <= 2)
                 || (getCol() == col && Math.abs(getRow() - row) == 1);
     }
+
+    public String getURL() {
+        return "/pieces/images/white_king.png";
+    }
 }

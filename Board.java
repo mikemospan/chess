@@ -1,3 +1,5 @@
+import Pieces.*;
+
 public class Board {
     private Piece[][] board = new Piece[8][8];
 
@@ -14,39 +16,39 @@ public class Board {
 
         // White pawns
         for(int x=0; x<8; x++){
-            board[1][x] = new Pawn("white");
+            board[1][x] = new Pawn();
         }
 
         // Black pawns
         for(int x=0; x<8; x++){
-            board[6][x] = new Pawn("black");
+            board[6][x] = new Pawn();
         }
 
         //Rooks
-        board[0][0] = new Rook("white");
-        board[0][7] = new Rook("white");
-        board[7][7] = new Rook("black");
-        board[7][0] = new Rook("black");
+        board[0][0] = new Rook();
+        board[0][7] = new Rook();
+        board[7][7] = new Rook();
+        board[7][0] = new Rook();
 
         //Knights
-        board[0][1] = new Knight("white");
-        board[0][6] = new Knight("white");
-        board[7][6] = new Knight("black");
-        board[7][1] = new Knight("black");
+        board[0][1] = new Knight();
+        board[0][6] = new Knight();
+        board[7][6] = new Knight();
+        board[7][1] = new Knight();
 
         //Bishops
-        board[0][2] = new Bishop("white");
-        board[0][5] = new Bishop("white");
-        board[7][2] = new Bishop("black");
-        board[7][5] = new Bishop("black");
+        board[0][2] = new Bishop();
+        board[0][5] = new Bishop();
+        board[7][2] = new Bishop();
+        board[7][5] = new Bishop();
 
         //Queens
-        board[0][3] = new Queen("white");
-        board[7][3] = new Queen("black");
+        board[0][3] = new Queen();
+        board[7][3] = new Queen();
 
         //Kings
-        board[0][4] = new King("white");
-        board[7][4] = new King("black");
+        board[0][4] = new King();
+        board[7][4] = new King();
     }
 
 }

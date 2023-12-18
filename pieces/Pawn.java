@@ -2,6 +2,9 @@ package pieces;
 
 public class Pawn extends Piece {
     private boolean firstMove = true;
+    public Pawn(int col, int row) {
+        super(col, row);
+    }
 
     // TODO: Implement En Passant and potentially improve inheritance here
     @Override
@@ -20,6 +23,6 @@ public class Pawn extends Piece {
     }
 
     public String getURL() {
-        return "/pieces/images/white_king.png";
+        return "/pieces/images/white_pawn.png";
     }
 }

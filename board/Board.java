@@ -1,6 +1,7 @@
 package board;
 
-import pieces.King;
+import pieces.*;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -24,7 +25,28 @@ public class Board extends JPanel {
             System.out.println("No image under that path!");
         }
 
-        King king = new King();
+        King king = new King(4, 7);
         king.paintComponent(g);
+        Queen queen = new Queen(3, 7);
+        queen.paintComponent(g);
+
+        Bishop bishop1 = new Bishop(2, 7);
+        Bishop bishop2 = new Bishop(5, 7);
+        bishop1.paintComponent(g);
+        bishop2.paintComponent(g);
+
+        Knight knight1 = new Knight(1, 7);
+        Knight knight2 = new Knight(6, 7);
+        knight1.paintComponent(g);
+        knight2.paintComponent(g);
+
+        Rook rook1 = new Rook(0, 7);
+        Rook rook2 = new Rook(7, 7);
+        rook1.paintComponent(g);
+        rook2.paintComponent(g);
+
+        for (int i = 0; i < 8; i++) {
+            new Pawn(i, 6).paintComponent(g);
+        }
     }
 }

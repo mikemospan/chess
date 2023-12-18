@@ -1,8 +1,8 @@
 package pieces;
 
 public class King extends Piece {
-    public King(int col, int row) {
-        super(col, row);
+    public King(int col, int row, boolean isWhite) {
+        super(col, row, isWhite);
     }
     @Override
     public boolean canMove(int col, int row) {
@@ -10,6 +10,10 @@ public class King extends Piece {
     }
 
     public String getURL() {
-        return "/pieces/images/white_king.png";
+        if (getIsWhite()) {
+            return "/pieces/images/white_king.png";
+        } else {
+            return "/pieces/images/black_king.png";
+        }
     }
 }

@@ -1,8 +1,8 @@
 package pieces;
 
 public class Rook extends Piece {
-    public Rook(int col, int row) {
-        super(col, row);
+    public Rook(int col, int row, boolean isWhite) {
+        super(col, row, isWhite);
     }
     @Override
     public boolean canMove(int col, int row) {
@@ -10,6 +10,10 @@ public class Rook extends Piece {
     }
 
     public String getURL() {
-        return "/pieces/images/white_rook.png";
+        if (getIsWhite()) {
+            return "/pieces/images/white_rook.png";
+        } else {
+            return "/pieces/images/black_rook.png";
+        }
     }
 }

@@ -6,10 +6,12 @@ import java.awt.*;
 public abstract class Piece extends JComponent {
     private int col;
     private int row;
+    private final boolean isWhite;
 
-    public Piece(int col, int row) {
+    public Piece(int col, int row, boolean isWhite) {
         this.col = col;
         this.row = row;
+        this.isWhite = isWhite;
     }
 
     public void movePiece(int col, int row) {
@@ -47,6 +49,10 @@ public abstract class Piece extends JComponent {
 
     public int getRow() {
         return row;
+    }
+
+    public boolean getIsWhite() {
+        return isWhite;
     }
 
     public void setCol(int col) {

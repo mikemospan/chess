@@ -2,8 +2,8 @@ package pieces;
 
 public class Pawn extends Piece {
     private boolean firstMove = true;
-    public Pawn(int col, int row) {
-        super(col, row);
+    public Pawn(int col, int row, boolean isWhite) {
+        super(col, row, isWhite);
     }
 
     // TODO: Implement En Passant and potentially improve inheritance here
@@ -23,6 +23,10 @@ public class Pawn extends Piece {
     }
 
     public String getURL() {
-        return "/pieces/images/white_pawn.png";
+        if (getIsWhite()) {
+            return "/pieces/images/white_pawn.png";
+        } else {
+            return "/pieces/images/black_pawn.png";
+        }
     }
 }

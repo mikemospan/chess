@@ -10,10 +10,6 @@ public class Rook extends Piece {
     }
 
     public String getURL() {
-        if (getIsWhite()) {
-            return "/pieces/images/white_rook.png";
-        } else {
-            return "/pieces/images/black_rook.png";
-        }
+        return getIsWhite() ? "/pieces/images/white_rook.png" : "/pieces/images/black_rook.png";
     }
 }

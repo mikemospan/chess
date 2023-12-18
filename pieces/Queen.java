@@ -10,10 +10,6 @@ public class Queen extends Piece {
     }
 
     public String getURL() {
-        if (getIsWhite()) {
-            return "/pieces/images/white_queen.png";
-        } else {
-            return "/pieces/images/black_queen.png";
-        }
+        return getIsWhite() ? "/pieces/images/white_queen.png" : "/pieces/images/black_queen.png";
     }
 }

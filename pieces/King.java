@@ -10,10 +10,6 @@ public class King extends Piece {
     }
 
     public String getURL() {
-        if (getIsWhite()) {
-            return "/pieces/images/white_king.png";
-        } else {
-            return "/pieces/images/black_king.png";
-        }
+        return getIsWhite() ? "/pieces/images/white_king.png" : "/pieces/images/black_king.png";
     }
 }

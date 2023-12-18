@@ -10,10 +10,6 @@ public class Bishop extends Piece {
     }
 
     public String getURL() {
-        if (getIsWhite()) {
-            return "/pieces/images/white_bishop.png";
-        } else {
-            return "/pieces/images/black_bishop.png";
-        }
+        return getIsWhite() ? "/pieces/images/white_bishop.png" : "/pieces/images/black_bishop.png";
     }
 }

@@ -23,10 +23,6 @@ public class Pawn extends Piece {
     }
 
     public String getURL() {
-        if (getIsWhite()) {
-            return "/pieces/images/white_pawn.png";
-        } else {
-            return "/pieces/images/black_pawn.png";
-        }
+        return getIsWhite() ? "/pieces/images/white_pawn.png" : "/pieces/images/black_pawn.png";
     }
 }

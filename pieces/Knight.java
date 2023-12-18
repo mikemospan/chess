@@ -10,10 +10,6 @@ public class Knight extends Piece {
     }
 
     public String getURL() {
-        if (getIsWhite()) {
-            return "/pieces/images/white_horse.png";
-        } else {
-            return "/pieces/images/black_horse.png";
-        }
+        return getIsWhite() ? "/pieces/images/white_horse.png" : "/pieces/images/black_horse.png";
     }
 }

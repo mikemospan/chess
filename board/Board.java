@@ -1,7 +1,5 @@
 package board;
 
-import pieces.*;
-
 import javax.swing.*;
 import java.awt.*;
 

@@ -11,10 +11,11 @@ public class Board extends JPanel {
 
     public Board() {
         this.setPreferredSize(new Dimension(BOARD_WIDTH, BOARD_HEIGHT));
+        this.setVisible(true);
     }
 
     @Override
-    public void paint(Graphics g) {
+    public void paintComponent(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         try {
             ImageIcon chessBoard = new ImageIcon(Board.class.getResource("/board/chess_board.jpg"));
@@ -27,5 +28,13 @@ public class Board extends JPanel {
 
         white.getPieces().forEach(piece -> piece.paintComponent(g));
         black.getPieces().forEach(piece -> piece.paintComponent(g));
+    }
+
+    public Player getWhite() {
+        return white;
+    }
+
+    public Player getBlack() {
+        return black;
     }
 }
